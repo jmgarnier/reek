@@ -6,8 +6,8 @@ RSpec.describe Reek::Configuration::ExcludedPaths do
     let(:exclusions) { [].extend(described_class) }
 
     context 'when one of given paths is a file' do
-      let(:file_as_path) { SAMPLES_PATH.join('inline.rb') }
-      let(:paths) { [SAMPLES_PATH, file_as_path] }
+      let(:file_as_path) { SMELLY_SOURCE_DIR.join('inline.rb') }
+      let(:paths) { [SMELLY_SOURCE_DIR, file_as_path] }
 
       it 'raises an error if one of the given paths is a file' do
         Reek::CLI::Silencer.silently do

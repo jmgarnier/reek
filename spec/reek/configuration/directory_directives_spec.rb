@@ -32,7 +32,7 @@ RSpec.describe Reek::Configuration::DirectoryDirectives do
     end
 
     context 'when one of given paths is a file' do
-      let(:file_as_path) { SAMPLES_PATH.join('inline.rb') }
+      let(:file_as_path) { SMELLY_SOURCE_DIR.join('inline.rb') }
 
       it 'raises an error' do
         Reek::CLI::Silencer.silently do
